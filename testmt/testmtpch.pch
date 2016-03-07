@@ -1,0 +1,20 @@
+//
+//  testmtpch.pch
+//  testmt
+//
+//  Created by yzl on 16/3/4.
+//  Copyright © 2016年 gaowen. All rights reserved.
+//
+
+#ifndef testmtpch_pch
+#define testmtpch_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIView+YYAdd.h"
+#import "UIScreen+YYAdd.h"
+#import "UIColor+YYAdd.h"
+#import "UIImage+YYAdd.h"
+
+#endif /* testmtpch_pch */
