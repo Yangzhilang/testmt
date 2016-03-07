@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */; };
+		176CF1B91C8E30DB00A88273 /* MTGlobelsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */; };
+		176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1BB1C8E365A00A88273 /* MTNavController.m */; };
 		17B1F9C91C892FB100F76318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9C81C892FB100F76318 /* main.m */; };
 		17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9CB1C892FB100F76318 /* AppDelegate.m */; };
 		17B1F9CF1C892FB100F76318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9CE1C892FB100F76318 /* ViewController.m */; };
@@ -29,6 +31,10 @@
 		0262E2759C8C3C60BEF2C239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		175CD26C1C8CFC3E00A680A6 /* MTHomeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeScrollView.h; sourceTree = "<group>"; };
 		175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeScrollView.m; sourceTree = "<group>"; };
+		176CF1B71C8E30DB00A88273 /* MTGlobelsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGlobelsTool.h; sourceTree = "<group>"; };
+		176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGlobelsTool.m; sourceTree = "<group>"; };
+		176CF1BA1C8E365A00A88273 /* MTNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavController.h; sourceTree = "<group>"; };
+		176CF1BB1C8E365A00A88273 /* MTNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavController.m; sourceTree = "<group>"; };
 		17B1F9C41C892FB100F76318 /* testmt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testmt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B1F9C81C892FB100F76318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17B1F9CA1C892FB100F76318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -71,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		176CF1B61C8E30AB00A88273 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				176CF1B71C8E30DB00A88273 /* MTGlobelsTool.h */,
+				176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
 		17B1F9BB1C892FB100F76318 = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +107,7 @@
 		17B1F9C61C892FB100F76318 /* testmt */ = {
 			isa = PBXGroup;
 			children = (
+				176CF1B61C8E30AB00A88273 /* Tool */,
 				17B1FA031C89934500F76318 /* More */,
 				17B1FA021C89934000F76318 /* Mine */,
 				17B1FA011C89933200F76318 /* Shop */,
@@ -183,6 +199,8 @@
 			children = (
 				17B1F9F61C8973DD00F76318 /* MTTabBarController.h */,
 				17B1F9F71C8973DD00F76318 /* MTTabBarController.m */,
+				176CF1BA1C8E365A00A88273 /* MTNavController.h */,
+				176CF1BB1C8E365A00A88273 /* MTNavController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -359,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B1F9F81C8973DD00F76318 /* MTTabBarController.m in Sources */,
+				176CF1B91C8E30DB00A88273 /* MTGlobelsTool.m in Sources */,
 				17B1F9FF1C8974D400F76318 /* MTTabBarBtn.m in Sources */,
 				17B1F9FC1C89743100F76318 /* MTTabBar.m in Sources */,
 				17B1F9EA1C893EBA00F76318 /* MTHomeController.m in Sources */,
@@ -368,6 +387,7 @@
 				17B1F9ED1C893FE100F76318 /* MTHomeMenu.m in Sources */,
 				17B1F9F01C89409800F76318 /* MTMenuButton.m in Sources */,
 				17B1F9C91C892FB100F76318 /* main.m in Sources */,
+				176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */,
 				175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

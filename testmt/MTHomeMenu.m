@@ -14,9 +14,9 @@
 #import "UIImage+YYAdd.h"
 #import "UIColor+YYAdd.h"
 #import "MTHomeScrollView.h"
+#import "MTGlobelsTool.h"
 
-
-@interface MTHomeMenu ()
+@interface MTHomeMenu ()<UIScrollViewDelegate>
 
 @property(nonatomic,strong) MTHomeScrollView *scrollView;
 @property(nonatomic,strong) UIPageControl *page;
@@ -35,7 +35,7 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.frame = CGRectMake(0, 0, kScreenWidth, kHomeMenuViewH);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kHomeMenuViewH+20);
         [self initMenus];
     }
     return self;
@@ -65,6 +65,7 @@
         [btns addObject:btn];
     }
     _menus = [NSArray arrayWithArray:btns];
+    self.page.currentPage = 0;
 }
 - (MTMenuButton*)createMenuBtnWithName:(NSString*)name img:(NSString*)image frame:(CGRect)frame{
     MTMenuButton *button = [MTMenuButton buttonWithType:UIButtonTypeCustom];
@@ -85,9 +86,36 @@
         _scrollView = [[MTHomeScrollView alloc] initWithFrame:self.bounds];
         _scrollView.contentSize = CGSizeMake(kScreenWidth*2, self.height);
         _scrollView.pagingEnabled = YES;
+        _scrollView.delegate = self;
+        _scrollView.showsHorizontalScrollIndicator = NO;
         [self addSubview:_scrollView];
     }
     return _scrollView;
+}
+
+- (UIPageControl*)page{
+    if (!_page) {
+        _page = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, 100, 20)];
+        _page.center = CGPointMake(self.centerX, self.height-10);
+        _page.numberOfPages = 2;
+        _page.currentPage = 0;
+        _page.currentPageIndicatorTintColor = [MTGlobelsTool themeColor];
+        _page.pageIndicatorTintColor = UIColorRGB(154, 154, 154);
+        [self addSubview:_page];
+        [self bringSubviewToFront:_page];
+    }
+    return _page;
+}
+
+#pragma mark - scrollView delegate
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    if (_scrollView.contentOffset.x!=0) {
+        self.page.currentPage = 1;
+    }
+    else{
+        self.page.currentPage = 0;
+    }
 }
 
 @end

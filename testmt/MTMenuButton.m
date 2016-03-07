@@ -31,7 +31,7 @@
 
     CGFloat cx = self.width/2;
     CGFloat cy = self.height/2;
-    self.imageView.size = CGSizeMake(50, 50);
+    self.imageView.size = CGSizeMake(45, 45);
     self.titleLabel.size = CGSizeMake(50, 20);
 //    NSLog(@"%@",NSStringFromCGRect(self.titleLabel.frame));
     self.imageView.center = CGPointMake(cx, cy-self.imageView.height/2+15);
