@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */; };
-		176CF1B91C8E30DB00A88273 /* MTGlobelsTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */; };
+		176CF1B91C8E30DB00A88273 /* MTGloblesTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1B81C8E30DB00A88273 /* MTGloblesTool.m */; };
 		176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1BB1C8E365A00A88273 /* MTNavController.m */; };
 		17B1F9C91C892FB100F76318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9C81C892FB100F76318 /* main.m */; };
 		17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9CB1C892FB100F76318 /* AppDelegate.m */; };
@@ -24,6 +24,9 @@
 		17B1F9F81C8973DD00F76318 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9F71C8973DD00F76318 /* MTTabBarController.m */; };
 		17B1F9FC1C89743100F76318 /* MTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9FB1C89743100F76318 /* MTTabBar.m */; };
 		17B1F9FF1C8974D400F76318 /* MTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9FE1C8974D400F76318 /* MTTabBarBtn.m */; };
+		17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */; };
+		17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2501C8ED4A2009AEC66 /* MTHomeService.m */; };
+		17CAC2551C8ED84F009AEC66 /* MTDiscountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */; };
 		4AFCAA9A52D95A44AE3A6D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0262E2759C8C3C60BEF2C239 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +34,8 @@
 		0262E2759C8C3C60BEF2C239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		175CD26C1C8CFC3E00A680A6 /* MTHomeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeScrollView.h; sourceTree = "<group>"; };
 		175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeScrollView.m; sourceTree = "<group>"; };
-		176CF1B71C8E30DB00A88273 /* MTGlobelsTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGlobelsTool.h; sourceTree = "<group>"; };
-		176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGlobelsTool.m; sourceTree = "<group>"; };
+		176CF1B71C8E30DB00A88273 /* MTGloblesTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGloblesTool.h; sourceTree = "<group>"; };
+		176CF1B81C8E30DB00A88273 /* MTGloblesTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGloblesTool.m; sourceTree = "<group>"; };
 		176CF1BA1C8E365A00A88273 /* MTNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavController.h; sourceTree = "<group>"; };
 		176CF1BB1C8E365A00A88273 /* MTNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavController.m; sourceTree = "<group>"; };
 		17B1F9C41C892FB100F76318 /* testmt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testmt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -61,6 +64,13 @@
 		17B1F9FD1C8974D400F76318 /* MTTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTabBarBtn.h; sourceTree = "<group>"; };
 		17B1F9FE1C8974D400F76318 /* MTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTabBarBtn.m; sourceTree = "<group>"; };
 		17B1FA001C897ED500F76318 /* testmtpch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testmtpch.pch; sourceTree = "<group>"; };
+		17CAC24B1C8EC2F0009AEC66 /* MTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNetworkManager.h; sourceTree = "<group>"; };
+		17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNetworkManager.m; sourceTree = "<group>"; };
+		17CAC24F1C8ED4A2009AEC66 /* MTHomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeService.h; sourceTree = "<group>"; };
+		17CAC2501C8ED4A2009AEC66 /* MTHomeService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeService.m; sourceTree = "<group>"; };
+		17CAC2521C8ED5F4009AEC66 /* MTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTConst.h; sourceTree = "<group>"; };
+		17CAC2531C8ED84F009AEC66 /* MTDiscountItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDiscountItem.h; sourceTree = "<group>"; };
+		17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDiscountItem.m; sourceTree = "<group>"; };
 		AAB8EA8203B5EDC9CBD8312A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F2B4711C3D13091B81080B25 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,8 +90,9 @@
 		176CF1B61C8E30AB00A88273 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
-				176CF1B71C8E30DB00A88273 /* MTGlobelsTool.h */,
-				176CF1B81C8E30DB00A88273 /* MTGlobelsTool.m */,
+				17CAC24E1C8ED482009AEC66 /* Home */,
+				17CAC24A1C8EC2C9009AEC66 /* Http */,
+				17CAC2491C8EC26B009AEC66 /* Globle */,
 			);
 			name = Tool;
 			sourceTree = "<group>";
@@ -159,6 +170,8 @@
 		17B1F9E21C893C4E00F76318 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				17CAC2531C8ED84F009AEC66 /* MTDiscountItem.h */,
+				17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -235,6 +248,34 @@
 			children = (
 			);
 			name = More;
+			sourceTree = "<group>";
+		};
+		17CAC2491C8EC26B009AEC66 /* Globle */ = {
+			isa = PBXGroup;
+			children = (
+				176CF1B71C8E30DB00A88273 /* MTGloblesTool.h */,
+				176CF1B81C8E30DB00A88273 /* MTGloblesTool.m */,
+				17CAC2521C8ED5F4009AEC66 /* MTConst.h */,
+			);
+			name = Globle;
+			sourceTree = "<group>";
+		};
+		17CAC24A1C8EC2C9009AEC66 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				17CAC24B1C8EC2F0009AEC66 /* MTNetworkManager.h */,
+				17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */,
+			);
+			name = Http;
+			sourceTree = "<group>";
+		};
+		17CAC24E1C8ED482009AEC66 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				17CAC24F1C8ED4A2009AEC66 /* MTHomeService.h */,
+				17CAC2501C8ED4A2009AEC66 /* MTHomeService.m */,
+			);
+			name = Home;
 			sourceTree = "<group>";
 		};
 		1837978BE0FA269B1D2C955D /* Pods */ = {
@@ -377,14 +418,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				17B1F9F81C8973DD00F76318 /* MTTabBarController.m in Sources */,
-				176CF1B91C8E30DB00A88273 /* MTGlobelsTool.m in Sources */,
+				176CF1B91C8E30DB00A88273 /* MTGloblesTool.m in Sources */,
 				17B1F9FF1C8974D400F76318 /* MTTabBarBtn.m in Sources */,
 				17B1F9FC1C89743100F76318 /* MTTabBar.m in Sources */,
+				17CAC2551C8ED84F009AEC66 /* MTDiscountItem.m in Sources */,
 				17B1F9EA1C893EBA00F76318 /* MTHomeController.m in Sources */,
 				17B1F9CF1C892FB100F76318 /* ViewController.m in Sources */,
 				17B1F9E71C893E2E00F76318 /* MTBaseTBController.m in Sources */,
+				17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */,
 				17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */,
 				17B1F9ED1C893FE100F76318 /* MTHomeMenu.m in Sources */,
+				17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */,
 				17B1F9F01C89409800F76318 /* MTMenuButton.m in Sources */,
 				17B1F9C91C892FB100F76318 /* main.m in Sources */,
 				176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */,

@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MTGlobelsTool : NSObject
+@interface MTGloblesTool : NSObject
 
 #define MTThemeColorPath @"themecolor.mt"
 

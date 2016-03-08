@@ -16,5 +16,6 @@
 #import "UIScreen+YYAdd.h"
 #import "UIColor+YYAdd.h"
 #import "UIImage+YYAdd.h"
+#import <YYModel.h>
 
 #endif /* testmtpch_pch */

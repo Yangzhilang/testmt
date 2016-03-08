@@ -6,10 +6,10 @@
 //  Copyright © 2016年 gaowen. All rights reserved.
 //
 
-#import "MTGlobelsTool.h"
+#import "MTGloblesTool.h"
 #import "UIColor+YYAdd.h"
 
-@implementation MTGlobelsTool
+@implementation MTGloblesTool
 
 static UIColor *g_themeColor;
 
@@ -32,7 +32,5 @@ static UIColor *g_themeColor;
     g_themeColor = color;
     [NSKeyedArchiver archiveRootObject:g_themeColor toFile:[self themeFile]];
 }
-
-
 
 @end

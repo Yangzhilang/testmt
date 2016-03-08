@@ -7,7 +7,7 @@
 //
 
 #import "MTNavController.h"
-#import "MTGlobelsTool.h"
+#import "MTGloblesTool.h"
 #import "UIImage+YYAdd.h"
 
 @interface MTNavController ()
@@ -18,7 +18,7 @@
 
 + (void)initialize{
     UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageWithColor:[MTGlobelsTool themeColor]] forBarMetrics:UIBarMetricsDefault];
+    [bar setBackgroundImage:[UIImage imageWithColor:[MTGloblesTool themeColor]] forBarMetrics:UIBarMetricsDefault];
 }
 
 - (void)viewDidLoad {

@@ -14,7 +14,7 @@
 #import "UIImage+YYAdd.h"
 #import "UIColor+YYAdd.h"
 #import "MTHomeScrollView.h"
-#import "MTGlobelsTool.h"
+#import "MTGloblesTool.h"
 
 @interface MTHomeMenu ()<UIScrollViewDelegate>
 
@@ -99,7 +99,7 @@
         _page.center = CGPointMake(self.centerX, self.height-10);
         _page.numberOfPages = 2;
         _page.currentPage = 0;
-        _page.currentPageIndicatorTintColor = [MTGlobelsTool themeColor];
+        _page.currentPageIndicatorTintColor = [MTGloblesTool themeColor];
         _page.pageIndicatorTintColor = UIColorRGB(154, 154, 154);
         [self addSubview:_page];
         [self bringSubviewToFront:_page];
