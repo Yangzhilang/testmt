@@ -7,9 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "MTNetworkManager.h"
+
+typedef void(^SuccessHome)(NSArray* data);
 
 @interface MTHomeService : NSObject
 
-- (void)discountDataWithSuccess:(Success)success failure:(Failure)failure;
+/**
+ *  获取打折数据
+ *
+ *  @param success
+ *  @param failure 
+ */
++ (void)discountDataWithSuccess:(SuccessHome)success failure:(Failure)failure;
 
 @end

@@ -35,14 +35,14 @@
 
 - (instancetype)init{
     if (self = [super init]) {
-        self.frame = CGRectMake(0, 0, kScreenWidth, kHomeMenuViewH+20);
+        self.frame = CGRectMake(0, 0, kScreenWidth, kHomeMenuViewH);
         [self initMenus];
     }
     return self;
 }
 
 - (void)initMenus{
-    CGFloat bw,bh = kHomeMenuViewH/2;
+    CGFloat bw,bh = (kHomeMenuViewH-20)/2;
     int totalBtn;
     if (kScreenWidth<=320) {
         bw = kScreenWidth/4;

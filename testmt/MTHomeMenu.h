@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#define kHomeMenuViewH 150
+#define kHomeMenuViewH 170
 
 @interface MTHomeMenu : UIView
 

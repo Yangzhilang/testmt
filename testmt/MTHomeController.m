@@ -8,8 +8,13 @@
 
 #import "MTHomeController.h"
 #import "MTHomeMenu.h"
+#import "MTHomeDiscountView.h"
+#import <YYCategories/YYCGUtilities.h>
+#import "MTHomeService.h"
 
 @interface MTHomeController ()
+
+@property(nonatomic,strong)NSArray *discountData;
 
 @end
 
@@ -20,7 +25,17 @@
     // Do any additional setup after loading the view.
 
     [self.tableView reloadData];
+    //加载折扣
+    [self loadDiscount];
+}
 
+- (void)loadDiscount{
+    [MTHomeService discountDataWithSuccess:^(NSArray *data) {
+        self.discountData = data;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+        NSLog(@"dicount request fail");
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -50,7 +65,11 @@
 
 #pragma mark - tableview delegate datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+    int count = 1;
+    if (self.discountData && self.discountData.count) {
+        count++;
+    }
+    return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -60,6 +79,9 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     if (indexPath.section == 0) {
         return kHomeMenuViewH;
+    }
+    else if (indexPath.section == 1){
+        return kHomeDiscountViewH;
     }
     return 44;
 }
@@ -72,8 +94,13 @@
         MTHomeMenu *homeMenu = [[MTHomeMenu alloc] init];
         [cell.contentView addSubview:homeMenu];
     }
-    else if (indexPath.section ==2){
-
+    else if (indexPath.section ==1){
+        NSString *identifier = @"discountcell";
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+        MTHomeDiscountView *homedisView = [[MTHomeDiscountView alloc] initWithFrame:CGRectMake(0, 0,kScreenWidth , kHomeDiscountViewH)];
+        homedisView.items = self.discountData;
+//        homedisView.backgroundColor = [UIColor blueColor];
+        [cell.contentView addSubview:homedisView];
     }
     return cell;
 }
