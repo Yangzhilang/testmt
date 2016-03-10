@@ -9,6 +9,9 @@
 #import "MTDiscountBtn.h"
 #import <YYCategories/UIView+YYAdd.h>
 #import <YYCategories/UIColor+YYAdd.h>
+#import <UIButton+WebCache.h>
+
+#define MTDiscountPadding 10
 
 @interface MTDiscountBtn ()
 
@@ -25,6 +28,8 @@
     _item = item;
     [self setBigTitle:item.maintitle color:[UIColor colorWithHexString:_item.typeface_color]];
     [self setSmallTitle:item.deputytitle color:[UIColor lightGrayColor]];
+    [self sd_setImageWithURL:item.imageurl forState:UIControlStateNormal];
+    [self sd_setImageWithURL:item.imageurl forState:UIControlStateHighlighted];
 }
 
 - (void)setBigTitle:(NSString *)title color:(UIColor *)color{
@@ -41,10 +46,11 @@
 - (void)layoutSubviews{
     [super layoutSubviews];
 
+    self.imageView.size = CGSizeMake(50, 50);
     self.imageView.centerY = self.height/2;
-    self.imageView.right = self.width - 15;
+    self.imageView.right = self.width - MTDiscountPadding;
 
-    self.titleLabel.left = 15;
+    self.titleLabel.left = MTDiscountPadding;
     self.titleLabel.top = 10;
     self.smallLabel.left = self.titleLabel.left + 5;
     self.smallLabel.top = self.titleLabel.bottom + 5;

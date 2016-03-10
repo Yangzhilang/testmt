@@ -14,6 +14,18 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
+  - Masonry (0.6.4)
+  - SDWebImage (3.7.5):
+    - SDWebImage/Core (= 3.7.5)
+  - SDWebImage/Core (3.7.5)
   - YYCategories (1.0):
     - YYCategories/no-arc (= 1.0)
   - YYCategories/no-arc (1.0)
@@ -21,11 +33,17 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CocoaLumberjack
+  - Masonry
+  - SDWebImage
   - YYCategories
   - YYModel
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  SDWebImage: 69c6303e3348fba97e03f65d65d4fbc26740f461
   YYCategories: 08fccb29097e711091d828cdf77a2066ad8ba806
   YYModel: 794f0820a9a9703615bc166aa8e336abaf422c2b
 

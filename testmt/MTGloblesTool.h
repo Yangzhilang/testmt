@@ -7,10 +7,34 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
+#define MTThemeColorPath @"themecolor.mt"
+
 
 @interface MTGloblesTool : NSObject
+/**
+ *  位置信息
+ */
+@property(nonatomic,strong,readonly)CLLocation* location;
 
-#define MTThemeColorPath @"themecolor.mt"
+/**
+ *  初始化定位服务
+ */
+- (void)initService;
+
+/**
+ *  检查位置信息是否开启了
+ *
+ *  @return 
+ */
+- (BOOL)checkLocationEnabled;
+
+/**
+ *  获取该对象单例
+ *
+ *  @return MTGloblesTool instance
+ */
++ (instancetype)sharedTool;
 
 /**
  *  获取主题色

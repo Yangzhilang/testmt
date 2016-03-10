@@ -1,3 +1,6 @@
 pod 'YYCategories'
 pod 'AFNetworking'
 pod 'YYModel'
+pod 'SDWebImage'
+pod 'CocoaLumberjack'
+pod 'Masonry'

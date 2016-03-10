@@ -9,7 +9,22 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>CocoaLumberjack.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,7 +42,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>49937ED37B07F8733143B8092D296047</key>
+		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>18CE70EEA246C05C9B37519D3BE026AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4663ACC483DE861F2231A35911D77F51</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>751F46FE85F83B48E619E0276DFF4E97</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -37,12 +72,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A5854AFC0E150390B5D37744215605CB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>DE848E3F48A89EFB60CA0BE0FC364D9F</key>
+		<key>E65275603BF115E3B57AF2F1F157D678</key>
 		<dict>
 			<key>primary</key>
 			<true/>

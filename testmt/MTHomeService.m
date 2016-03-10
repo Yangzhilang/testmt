@@ -10,7 +10,8 @@
 #import "MTConst.h"
 #import "MTDiscountItem.h"
 #import <YYModel.h>
-
+#import "MTGloblesTool.h"
+#import "MTGuessYLikeItem.h"
 @implementation MTHomeService
 
 
@@ -20,12 +21,35 @@
         NSArray* data = [NSArray yy_modelArrayWithClass:[MTDiscountItem class] json:response[@"data"]];;
         if (data) {
             success(data);
-            NSLog(@"--------成功获取打折数据---------");
-            NSLog(@"%@",response[@"data"]);
+            DDLogInfo(@"--------成功获取打折数据---------");
+            DDLogInfo(@"打折数据Count:%ld",[response[@"data"]count]);
+            DDLogVerbose(@"%@",response[@"data"]);
         }else{
-            NSLog(@"---------获取打折数据失败--------");
+            DDLogInfo(@"---------获取打折数据失败--------");
         }
     } failure:^(NSError *error) {
+        DDLogInfo(@"---------获取打折数据失败--------");
+        DDLogError(@"%@",error);
+        failure(error);
+    }];
+}
+
++ (void)guessYouLikeDataWithScueess:(SuccessHome)success failure:(Failure)failure{
+    MTGloblesTool *tool = [MTGloblesTool sharedTool];
+    NSString *url = [NSString stringWithFormat:MTGULULR,tool.location.coordinate.latitude,tool.location.coordinate.longitude];
+    [MTNetworkManager GETWithURL:url params:nil success:^(id response) {
+        NSArray* data = [NSArray yy_modelArrayWithClass:[MTGuessYLikeItem class] json:response[@"data"]];;
+        if (data) {
+            success(data);
+            DDLogInfo(@"--------成功获取猜你喜欢数据---------");
+            DDLogDebug(@"打折数据Count:%ld",[response[@"data"]count]);
+            DDLogVerbose(@"%@",response[@"data"]);
+        }else{
+            DDLogInfo(@"---------获取猜你喜欢数据失败--------");
+        }
+    } failure:^(NSError *error) {
+        DDLogInfo(@"---------获取猜你喜欢失败--------");
+        DDLogError(@"%@",error);
         failure(error);
     }];
 }

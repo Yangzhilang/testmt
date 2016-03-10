@@ -9,12 +9,13 @@
 #import "MTHomeController.h"
 #import "MTHomeMenu.h"
 #import "MTHomeDiscountView.h"
-#import <YYCategories/YYCGUtilities.h>
 #import "MTHomeService.h"
+#import "MTGuessYLikeCell.h"
 
 @interface MTHomeController ()
 
 @property(nonatomic,strong)NSArray *discountData;
+@property(nonatomic,strong)NSArray *gulData;
 
 @end
 
@@ -23,10 +24,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-
     [self.tableView reloadData];
     //加载折扣
+
     [self loadDiscount];
+    [self loadGueeYLike];
 }
 
 - (void)loadDiscount{
@@ -34,7 +36,15 @@
         self.discountData = data;
         [self.tableView reloadData];
     } failure:^(NSError *error) {
-        NSLog(@"dicount request fail");
+    }];
+}
+
+- (void)loadGueeYLike{
+    [MTHomeService guessYouLikeDataWithScueess:^(NSArray *data) {
+        self.gulData = data;
+        [self.tableView reloadData];
+    } failure:^(NSError *error) {
+
     }];
 }
 
@@ -55,7 +65,7 @@
 
 - (UITableView*)tableView{
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         [self.view addSubview:_tableView];
@@ -69,10 +79,16 @@
     if (self.discountData && self.discountData.count) {
         count++;
     }
+    if (self.gulData && self.gulData.count) {
+        count++;
+    }
     return count;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if (section==2) {
+        return self.gulData.count+1;
+    }
     return 1;
 }
 
@@ -83,7 +99,36 @@
     else if (indexPath.section == 1){
         return kHomeDiscountViewH;
     }
+    else if (indexPath.section == 2){
+        if (indexPath.row==0) {
+            return 33;
+        }
+        return MTGuessYLikeCellH;
+    }
     return 44;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if (section==0) {
+        return .1;
+    }
+    return 5;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 5;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.width, 0)];
+    view.backgroundColor = UIColorRGB(239, 239, 244);
+    return view;
+}
+
+- (UIView*)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, tableView.width, 0)];
+    view.backgroundColor = UIColorRGB(239, 239, 244);
+    return view;
 }
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -99,8 +144,20 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         MTHomeDiscountView *homedisView = [[MTHomeDiscountView alloc] initWithFrame:CGRectMake(0, 0,kScreenWidth , kHomeDiscountViewH)];
         homedisView.items = self.discountData;
-//        homedisView.backgroundColor = [UIColor blueColor];
         [cell.contentView addSubview:homedisView];
+    }
+    else if (indexPath.section == 2){
+        if (indexPath.row == 0){
+            NSString *identifier = @"guessyoulikecell1";
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            cell.textLabel.text = @"猜你喜欢";
+        }
+        else{
+            MTGuessYLikeCell *gluCell = [MTGuessYLikeCell cellWithTableView:tableView];
+            MTGuessYLikeItem *item = self.gulData[indexPath.row-1];
+            gluCell.item = item;
+            return gluCell;
+        }
     }
     return cell;
 }

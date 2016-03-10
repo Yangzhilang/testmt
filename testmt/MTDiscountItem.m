@@ -10,6 +10,10 @@
 
 @implementation MTDiscountItem
 
-
+- (BOOL)modelCustomTransformFromDictionary:(NSDictionary*)dic{
+    NSString* str = [self.imageurl.absoluteString stringByReplacingOccurrencesOfString:@"w.h" withString:@"120.0"];
+    self.imageurl = [NSURL URLWithString:str];
+    return YES;
+}
 
 @end

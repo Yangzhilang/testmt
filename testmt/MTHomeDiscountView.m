@@ -9,7 +9,9 @@
 #import "MTHomeDiscountView.h"
 #import "MTDiscountBtn.h"
 #import <YYCategories/UIView+YYAdd.h>
+#import <UIImage+YYAdd.h>
 #import <YYCategories/YYCGUtilities.h>
+#import <UIColor+YYAdd.h>
 
 #define MTDiscountBtnH 60
 
@@ -35,6 +37,7 @@
         MTDiscountBtn *btn = [self createDiscountBtn:item];
         [self addSubview:btn];
     }
+    self.buttons = btns;
 }
 
 - (MTDiscountBtn*)createDiscountBtn:(MTDiscountItem*)item{
@@ -43,14 +46,15 @@
     btn.item = item;
     btn.bounds = CGRectMake(0, 0, kScreenWidth/2, MTDiscountBtnH);
     btn.titleLabel.font = [UIFont systemFontOfSize:18];
-    btn.layer.borderWidth = 1;
+    btn.layer.borderWidth = .25;
     btn.layer.borderColor = [UIColor lightGrayColor].CGColor;
+    [btn setBackgroundImage:[UIImage imageWithColor:UIColorRGB(240, 240, 240)] forState:UIControlStateHighlighted];
     return btn;
 }
 
 - (void)layoutSubviews{
     [super layoutSubviews];
-    int index;
+    int index = 0;
     CGFloat w = kScreenWidth/2;
     for (UIView *view in self.subviews) {
         if ([view isKindOfClass:[MTDiscountBtn class]]) {
