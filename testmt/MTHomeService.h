@@ -29,4 +29,12 @@ typedef void(^SuccessHome)(NSArray* data);
  */
 + (void)guessYouLikeDataWithScueess:(SuccessHome)success failure:(Failure)failure;
 
+/**
+ *  获取城市列表数据
+ *
+ *  @param success
+ *  @param failure 
+ */
++ (void)cityDataWithSuccess:(SuccessHome)success failure:(Failure)failure;
+
 @end

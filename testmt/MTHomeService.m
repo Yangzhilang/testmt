@@ -37,12 +37,13 @@
 + (void)guessYouLikeDataWithScueess:(SuccessHome)success failure:(Failure)failure{
     MTGloblesTool *tool = [MTGloblesTool sharedTool];
     NSString *url = [NSString stringWithFormat:MTGULULR,tool.location.coordinate.latitude,tool.location.coordinate.longitude];
+//    DDLogDebug(@"%@",url);
     [MTNetworkManager GETWithURL:url params:nil success:^(id response) {
         NSArray* data = [NSArray yy_modelArrayWithClass:[MTGuessYLikeItem class] json:response[@"data"]];;
         if (data) {
             success(data);
             DDLogInfo(@"--------成功获取猜你喜欢数据---------");
-            DDLogDebug(@"打折数据Count:%ld",[response[@"data"]count]);
+            DDLogDebug(@"猜你喜欢数据Count:%ld",[response[@"data"]count]);
             DDLogVerbose(@"%@",response[@"data"]);
         }else{
             DDLogInfo(@"---------获取猜你喜欢数据失败--------");
@@ -52,6 +53,17 @@
         DDLogError(@"%@",error);
         failure(error);
     }];
+}
+
++ (void)cityDataWithSuccess:(SuccessHome)success failure:(Failure)failure{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        NSString *path =[[NSBundle mainBundle] pathForResource:@"cities" ofType:@"plist"];
+        NSArray *data = [NSArray arrayWithContentsOfFile:path];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            DDLogInfo(@"----成功获取城市数据----");
+            success(data);
+        });
+    });
 }
 
 

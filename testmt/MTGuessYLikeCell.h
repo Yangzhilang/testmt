@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#define MTGuessYLikeCellH 80
+#define MTGuessYLikeCellH 90
 @class MTGuessYLikeItem;
 @interface MTGuessYLikeCell : UITableViewCell
 

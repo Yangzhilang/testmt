@@ -14,6 +14,9 @@
     if (_range && _mtitle) {
         self.dtitle = [NSString stringWithFormat:@"[%@]%@",_range,_mtitle];
     }
+    NSString* str = [self.squareimgurl.absoluteString stringByReplacingOccurrencesOfString:@"w.h" withString:@"160.0"];
+    self.squareimgurl = [NSURL URLWithString:str];
+
     return YES;
 }
 @end

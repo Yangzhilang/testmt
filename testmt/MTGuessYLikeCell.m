@@ -39,7 +39,7 @@
 
 - (void)setItem:(MTGuessYLikeItem *)item{
     _item = item;
-    [self.storeIcon sd_setImageWithURL:_item.imageurl placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
+    [self.storeIcon sd_setImageWithURL:_item.squareimgurl placeholderImage:[UIImage imageNamed:@"bg_customReview_image_default"]];
     self.storeLabel.text = _item.mname;
     self.storeSecLabel.text = _item.dtitle;
     self.priceLabel.text = [NSString stringWithFormat:@"%ld",_item.price];
@@ -53,7 +53,7 @@
         [_storeIcon mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.mas_equalTo(@(Padding1));
             make.top.mas_equalTo(@(Padding2));
-            make.size.mas_equalTo(CGSizeMake(65, 65));
+            make.size.mas_equalTo(CGSizeMake(MTGuessYLikeCellH-Padding1-Padding2, MTGuessYLikeCellH-Padding1-Padding2));
         }];
     }
     return _storeIcon;
@@ -65,13 +65,13 @@
         _storeLabel = [[UILabel alloc] init];
         _storeLabel.font = [UIFont systemFontOfSize:15];
         _storeLabel.textColor = [UIColor blackColor];
+        [self.contentView addSubview:_storeLabel];
         [_storeLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(leftView.mas_right).with.offset(Padding1);
             make.top.equalTo(leftView);
-            make.width.mas_equalTo(@(10));
-            make.height.mas_equalTo(@10);
+            make.right.mas_equalTo(@100);
+            make.height.mas_greaterThanOrEqualTo(@20);
         }];
-        [self.contentView addSubview:_storeLabel];
     }
     return _storeLabel;
 }
@@ -84,13 +84,14 @@
         _storeSecLabel = [[UILabel alloc] init];
         _storeSecLabel.font =[UIFont systemFontOfSize:12];
         _storeSecLabel.textColor = [UIColor lightGrayColor];
+        _storeSecLabel.numberOfLines = 0;
+        [self.contentView addSubview:_storeSecLabel];
         [_storeSecLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(topView);
             make.right.equalTo(contentView).with.offset(-Padding2);
-            make.height.mas_equalTo(@(20));
+            make.height.mas_lessThanOrEqualTo(@40);
             make.centerY.mas_equalTo(@((bottomView.centerY+topView.centerY)/2));
         }];
-        [self.contentView addSubview:_storeSecLabel];
     }
     return _storeSecLabel;
 }
@@ -101,28 +102,28 @@
         _priceLabel = [[UILabel alloc] init];
         _priceLabel.font = [UIFont systemFontOfSize:15];
         _priceLabel.textColor = [MTGloblesTool themeColor];
-        [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(leftView).width.offset(Padding2);
-            make.bottom.equalTo(leftView);
-            make.width.mas_equalTo(@30);
-        }];
         [self.contentView addSubview:_priceLabel];
+        [_priceLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(leftView.mas_right).with.offset(Padding2);
+            make.bottom.equalTo(leftView);
+            make.size.mas_equalTo(CGSizeMake(30,30));
+        }];
     }
     return _priceLabel;
 }
 
 - (UILabel*)priceSecLabel{
     if (!_priceSecLabel) {
-        __weak UIView* leftView = self.priceSecLabel;
+        __weak UIView* leftView = self.priceLabel;
         _priceSecLabel = [[UILabel alloc] init];
         _priceSecLabel.font = [UIFont systemFontOfSize:12];
         _priceSecLabel.textColor = [MTGloblesTool themeColor];
-        [_priceSecLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.left.equalTo(leftView).width.offset(Padding1);
-            make.bottom.equalTo(leftView);
-            make.width.mas_equalTo(@30);
-        }];
         [self.contentView addSubview:_priceSecLabel];
+        [_priceSecLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.equalTo(leftView.mas_right).with.offset(Padding1);
+            make.bottom.equalTo(leftView);
+            make.size.mas_equalTo(CGSizeMake(20,20));
+        }];
     }
     return _priceSecLabel;
 }

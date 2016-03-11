@@ -11,8 +11,13 @@
 #import "MTHomeDiscountView.h"
 #import "MTHomeService.h"
 #import "MTGuessYLikeCell.h"
+#import "MTCityButton.h"
+#import "MTHomeSearchBtn.h"
 
 @interface MTHomeController ()
+
+@property(nonatomic,strong)MTCityButton *cityButton;
+@property(nonatomic,strong)MTHomeSearchBtn *searchBtn;
 
 @property(nonatomic,strong)NSArray *discountData;
 @property(nonatomic,strong)NSArray *gulData;
@@ -24,11 +29,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
+    [self setUpNavBar];
     [self.tableView reloadData];
-    //加载折扣
+
 
     [self loadDiscount];
     [self loadGueeYLike];
+}
+
+- (void)setUpNavBar{
+
+    self.searchBtn = [MTHomeSearchBtn searchBtn];
+    self.navigationItem.titleView = self.searchBtn;
+
+    self.cityButton = [MTCityButton cityBtn];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButton];
 }
 
 - (void)loadDiscount{
@@ -135,21 +151,29 @@
     UITableViewCell *cell;
     if (indexPath.section == 0) {
         NSString *identifier = @"menucell";
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        MTHomeMenu *homeMenu = [[MTHomeMenu alloc] init];
-        [cell.contentView addSubview:homeMenu];
+        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            MTHomeMenu *homeMenu = [[MTHomeMenu alloc] init];
+            [cell.contentView addSubview:homeMenu];
+        }
     }
     else if (indexPath.section ==1){
         NSString *identifier = @"discountcell";
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
-        MTHomeDiscountView *homedisView = [[MTHomeDiscountView alloc] initWithFrame:CGRectMake(0, 0,kScreenWidth , kHomeDiscountViewH)];
-        homedisView.items = self.discountData;
-        [cell.contentView addSubview:homedisView];
+        cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+        if (!cell) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            MTHomeDiscountView *homedisView = [[MTHomeDiscountView alloc] initWithFrame:CGRectMake(0, 0,kScreenWidth , kHomeDiscountViewH)];
+            homedisView.items = self.discountData;
+            [cell.contentView addSubview:homedisView];
+        }
     }
     else if (indexPath.section == 2){
         if (indexPath.row == 0){
             NSString *identifier = @"guessyoulikecell1";
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            if (!cell) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
+            }
             cell.textLabel.text = @"猜你喜欢";
         }
         else{

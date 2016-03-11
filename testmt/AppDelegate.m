@@ -21,6 +21,8 @@
 
     [DDLog addLogger:[DDASLLogger sharedInstance]];
     [DDLog addLogger:[DDTTYLogger sharedInstance]];
+    [DDTTYLogger sharedInstance].colorsEnabled = YES;
+    [[DDTTYLogger sharedInstance] setForegroundColor:UIColorRGB(206, 134, 49) backgroundColor:nil forFlag:DDLogFlagInfo];
 
     [[MTGloblesTool sharedTool] initService];
     return YES;

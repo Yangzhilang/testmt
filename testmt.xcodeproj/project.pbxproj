@@ -27,6 +27,10 @@
 		17B1F9F81C8973DD00F76318 /* MTTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9F71C8973DD00F76318 /* MTTabBarController.m */; };
 		17B1F9FC1C89743100F76318 /* MTTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9FB1C89743100F76318 /* MTTabBar.m */; };
 		17B1F9FF1C8974D400F76318 /* MTTabBarBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9FE1C8974D400F76318 /* MTTabBarBtn.m */; };
+		17BEBFD01C92A96000F4D092 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17BEBFCF1C92A96000F4D092 /* cities.plist */; };
+		17BEBFD31C92B9B600F4D092 /* MTCityButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BEBFD21C92B9B600F4D092 /* MTCityButton.m */; };
+		17BEBFD61C92BEE400F4D092 /* MTHomeSearchBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BEBFD51C92BEE400F4D092 /* MTHomeSearchBtn.m */; };
+		17BEBFDC1C92D01B00F4D092 /* MTCitySearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17BEBFDB1C92D01B00F4D092 /* MTCitySearchController.m */; };
 		17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */; };
 		17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2501C8ED4A2009AEC66 /* MTHomeService.m */; };
 		17CAC2551C8ED84F009AEC66 /* MTDiscountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */; };
@@ -74,6 +78,13 @@
 		17B1F9FD1C8974D400F76318 /* MTTabBarBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTabBarBtn.h; sourceTree = "<group>"; };
 		17B1F9FE1C8974D400F76318 /* MTTabBarBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTTabBarBtn.m; sourceTree = "<group>"; };
 		17B1FA001C897ED500F76318 /* testmtpch.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = testmtpch.pch; sourceTree = "<group>"; };
+		17BEBFCF1C92A96000F4D092 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		17BEBFD11C92B9B600F4D092 /* MTCityButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCityButton.h; sourceTree = "<group>"; };
+		17BEBFD21C92B9B600F4D092 /* MTCityButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCityButton.m; sourceTree = "<group>"; };
+		17BEBFD41C92BEE400F4D092 /* MTHomeSearchBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeSearchBtn.h; sourceTree = "<group>"; };
+		17BEBFD51C92BEE400F4D092 /* MTHomeSearchBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeSearchBtn.m; sourceTree = "<group>"; };
+		17BEBFDA1C92D01B00F4D092 /* MTCitySearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCitySearchController.h; sourceTree = "<group>"; };
+		17BEBFDB1C92D01B00F4D092 /* MTCitySearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCitySearchController.m; sourceTree = "<group>"; };
 		17CAC24B1C8EC2F0009AEC66 /* MTNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNetworkManager.h; sourceTree = "<group>"; };
 		17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNetworkManager.m; sourceTree = "<group>"; };
 		17CAC24F1C8ED4A2009AEC66 /* MTHomeService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeService.h; sourceTree = "<group>"; };
@@ -169,6 +180,7 @@
 				17B1F9E21C893C4E00F76318 /* Models */,
 				17B1F9E11C893C4400F76318 /* Controllers */,
 				17B1F9F11C896D9700F76318 /* homemenuitems.plist */,
+				17BEBFCF1C92A96000F4D092 /* cities.plist */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -178,6 +190,8 @@
 			children = (
 				17B1F9E81C893EBA00F76318 /* MTHomeController.h */,
 				17B1F9E91C893EBA00F76318 /* MTHomeController.m */,
+				17BEBFDA1C92D01B00F4D092 /* MTCitySearchController.h */,
+				17BEBFDB1C92D01B00F4D092 /* MTCitySearchController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +222,10 @@
 				17FA3AEA1C90222C006E9F11 /* MTDiscountBtn.m */,
 				17A9C5111C91625F000DBEE9 /* MTGuessYLikeCell.h */,
 				17A9C5121C91625F000DBEE9 /* MTGuessYLikeCell.m */,
+				17BEBFD11C92B9B600F4D092 /* MTCityButton.h */,
+				17BEBFD21C92B9B600F4D092 /* MTCityButton.m */,
+				17BEBFD41C92BEE400F4D092 /* MTHomeSearchBtn.h */,
+				17BEBFD51C92BEE400F4D092 /* MTHomeSearchBtn.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -382,6 +400,7 @@
 				17B1F9D71C892FB100F76318 /* LaunchScreen.storyboard in Resources */,
 				17B1F9F21C896D9700F76318 /* homemenuitems.plist in Resources */,
 				17B1F9D41C892FB100F76318 /* Assets.xcassets in Resources */,
+				17BEBFD01C92A96000F4D092 /* cities.plist in Resources */,
 				17B1F9D21C892FB100F76318 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +468,7 @@
 				17FA3AE81C902091006E9F11 /* MTHomeDiscountView.m in Sources */,
 				17B1F9EA1C893EBA00F76318 /* MTHomeController.m in Sources */,
 				17B1F9CF1C892FB100F76318 /* ViewController.m in Sources */,
+				17BEBFDC1C92D01B00F4D092 /* MTCitySearchController.m in Sources */,
 				17B1F9E71C893E2E00F76318 /* MTBaseTBController.m in Sources */,
 				17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */,
 				17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */,
@@ -457,10 +477,12 @@
 				17FA3AEB1C90222C006E9F11 /* MTDiscountBtn.m in Sources */,
 				17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */,
 				17B1F9F01C89409800F76318 /* MTMenuButton.m in Sources */,
+				17BEBFD61C92BEE400F4D092 /* MTHomeSearchBtn.m in Sources */,
 				17B1F9C91C892FB100F76318 /* main.m in Sources */,
 				176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */,
 				175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */,
 				17A9C5131C91625F000DBEE9 /* MTGuessYLikeCell.m in Sources */,
+				17BEBFD31C92B9B600F4D092 /* MTCityButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
