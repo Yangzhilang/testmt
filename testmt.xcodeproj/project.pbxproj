@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171B51C81C9963E6001E31DF /* MTShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171B51C71C9963E6001E31DF /* MTShopViewController.m */; };
+		171B51CB1C9965D1001E31DF /* MTShopChooseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 171B51CA1C9965D1001E31DF /* MTShopChooseView.m */; };
+		171B51CE1C996E52001E31DF /* MTShopChooseBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 171B51CD1C996E52001E31DF /* MTShopChooseBtn.m */; };
+		1759210E1C9792FF00C9F2A4 /* MTRefreshHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 1759210D1C9792FF00C9F2A4 /* MTRefreshHeader.m */; };
 		175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */; };
 		176CF1B91C8E30DB00A88273 /* MTGloblesTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1B81C8E30DB00A88273 /* MTGloblesTool.m */; };
 		176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */ = {isa = PBXBuildFile; fileRef = 176CF1BB1C8E365A00A88273 /* MTNavController.m */; };
+		178BB4B51C9BE7FB001E29BB /* MTShopTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 178BB4B41C9BE7FB001E29BB /* MTShopTypeView.m */; };
+		178BB4B81C9BE868001E29BB /* MTShopTypeBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 178BB4B71C9BE868001E29BB /* MTShopTypeBtn.m */; };
 		17A9C50D1C9128D6000DBEE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17A9C50C1C9128D6000DBEE9 /* CoreLocation.framework */; };
 		17A9C5101C915E4B000DBEE9 /* MTGuessYLikeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A9C50F1C915E4B000DBEE9 /* MTGuessYLikeItem.m */; };
 		17A9C5131C91625F000DBEE9 /* MTGuessYLikeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A9C5121C91625F000DBEE9 /* MTGuessYLikeCell.m */; };
+		17AD04881C9A380E00651218 /* MTShopTypeItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AD04871C9A380E00651218 /* MTShopTypeItem.m */; };
 		17B1F9C91C892FB100F76318 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9C81C892FB100F76318 /* main.m */; };
 		17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9CB1C892FB100F76318 /* AppDelegate.m */; };
 		17B1F9CF1C892FB100F76318 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17B1F9CE1C892FB100F76318 /* ViewController.m */; };
@@ -34,6 +41,8 @@
 		17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC24C1C8EC2F0009AEC66 /* MTNetworkManager.m */; };
 		17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2501C8ED4A2009AEC66 /* MTHomeService.m */; };
 		17CAC2551C8ED84F009AEC66 /* MTDiscountItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */; };
+		17CFC5C81C96A77C001C4A10 /* MTCodeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 17CFC5C71C96A77C001C4A10 /* MTCodeController.m */; };
+		17CFC5CD1C96B32C001C4A10 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17CFC5CC1C96B32C001C4A10 /* AVFoundation.framework */; };
 		17FA3AE81C902091006E9F11 /* MTHomeDiscountView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FA3AE71C902091006E9F11 /* MTHomeDiscountView.m */; };
 		17FA3AEB1C90222C006E9F11 /* MTDiscountBtn.m in Sources */ = {isa = PBXBuildFile; fileRef = 17FA3AEA1C90222C006E9F11 /* MTDiscountBtn.m */; };
 		4AFCAA9A52D95A44AE3A6D7E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0262E2759C8C3C60BEF2C239 /* libPods.a */; };
@@ -41,17 +50,31 @@
 
 /* Begin PBXFileReference section */
 		0262E2759C8C3C60BEF2C239 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		171B51C61C9963E6001E31DF /* MTShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopViewController.h; sourceTree = "<group>"; };
+		171B51C71C9963E6001E31DF /* MTShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopViewController.m; sourceTree = "<group>"; };
+		171B51C91C9965D1001E31DF /* MTShopChooseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopChooseView.h; sourceTree = "<group>"; };
+		171B51CA1C9965D1001E31DF /* MTShopChooseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopChooseView.m; sourceTree = "<group>"; };
+		171B51CC1C996E52001E31DF /* MTShopChooseBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopChooseBtn.h; sourceTree = "<group>"; };
+		171B51CD1C996E52001E31DF /* MTShopChooseBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopChooseBtn.m; sourceTree = "<group>"; };
+		1759210C1C9792FF00C9F2A4 /* MTRefreshHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTRefreshHeader.h; sourceTree = "<group>"; };
+		1759210D1C9792FF00C9F2A4 /* MTRefreshHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTRefreshHeader.m; sourceTree = "<group>"; };
 		175CD26C1C8CFC3E00A680A6 /* MTHomeScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeScrollView.h; sourceTree = "<group>"; };
 		175CD26D1C8CFC3E00A680A6 /* MTHomeScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeScrollView.m; sourceTree = "<group>"; };
 		176CF1B71C8E30DB00A88273 /* MTGloblesTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGloblesTool.h; sourceTree = "<group>"; };
 		176CF1B81C8E30DB00A88273 /* MTGloblesTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGloblesTool.m; sourceTree = "<group>"; };
 		176CF1BA1C8E365A00A88273 /* MTNavController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTNavController.h; sourceTree = "<group>"; };
 		176CF1BB1C8E365A00A88273 /* MTNavController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTNavController.m; sourceTree = "<group>"; };
+		178BB4B31C9BE7FB001E29BB /* MTShopTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopTypeView.h; sourceTree = "<group>"; };
+		178BB4B41C9BE7FB001E29BB /* MTShopTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopTypeView.m; sourceTree = "<group>"; };
+		178BB4B61C9BE868001E29BB /* MTShopTypeBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopTypeBtn.h; sourceTree = "<group>"; };
+		178BB4B71C9BE868001E29BB /* MTShopTypeBtn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopTypeBtn.m; sourceTree = "<group>"; };
 		17A9C50C1C9128D6000DBEE9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		17A9C50E1C915E4B000DBEE9 /* MTGuessYLikeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGuessYLikeItem.h; sourceTree = "<group>"; };
 		17A9C50F1C915E4B000DBEE9 /* MTGuessYLikeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGuessYLikeItem.m; sourceTree = "<group>"; };
 		17A9C5111C91625F000DBEE9 /* MTGuessYLikeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTGuessYLikeCell.h; sourceTree = "<group>"; };
 		17A9C5121C91625F000DBEE9 /* MTGuessYLikeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTGuessYLikeCell.m; sourceTree = "<group>"; };
+		17AD04861C9A380E00651218 /* MTShopTypeItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTShopTypeItem.h; sourceTree = "<group>"; };
+		17AD04871C9A380E00651218 /* MTShopTypeItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTShopTypeItem.m; sourceTree = "<group>"; };
 		17B1F9C41C892FB100F76318 /* testmt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testmt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B1F9C81C892FB100F76318 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17B1F9CA1C892FB100F76318 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +115,9 @@
 		17CAC2521C8ED5F4009AEC66 /* MTConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTConst.h; sourceTree = "<group>"; };
 		17CAC2531C8ED84F009AEC66 /* MTDiscountItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDiscountItem.h; sourceTree = "<group>"; };
 		17CAC2541C8ED84F009AEC66 /* MTDiscountItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTDiscountItem.m; sourceTree = "<group>"; };
+		17CFC5C61C96A77C001C4A10 /* MTCodeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTCodeController.h; sourceTree = "<group>"; };
+		17CFC5C71C96A77C001C4A10 /* MTCodeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTCodeController.m; sourceTree = "<group>"; };
+		17CFC5CC1C96B32C001C4A10 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		17FA3AE61C902091006E9F11 /* MTHomeDiscountView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTHomeDiscountView.h; sourceTree = "<group>"; };
 		17FA3AE71C902091006E9F11 /* MTHomeDiscountView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MTHomeDiscountView.m; sourceTree = "<group>"; };
 		17FA3AE91C90222C006E9F11 /* MTDiscountBtn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTDiscountBtn.h; sourceTree = "<group>"; };
@@ -105,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17CFC5CD1C96B32C001C4A10 /* AVFoundation.framework in Frameworks */,
 				17A9C50D1C9128D6000DBEE9 /* CoreLocation.framework in Frameworks */,
 				4AFCAA9A52D95A44AE3A6D7E /* libPods.a in Frameworks */,
 			);
@@ -113,6 +140,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171B51C31C99637E001E31DF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				17AD04861C9A380E00651218 /* MTShopTypeItem.h */,
+				17AD04871C9A380E00651218 /* MTShopTypeItem.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		171B51C41C996395001E31DF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				171B51C91C9965D1001E31DF /* MTShopChooseView.h */,
+				171B51CA1C9965D1001E31DF /* MTShopChooseView.m */,
+				171B51CC1C996E52001E31DF /* MTShopChooseBtn.h */,
+				171B51CD1C996E52001E31DF /* MTShopChooseBtn.m */,
+				178BB4B31C9BE7FB001E29BB /* MTShopTypeView.h */,
+				178BB4B41C9BE7FB001E29BB /* MTShopTypeView.m */,
+				178BB4B61C9BE868001E29BB /* MTShopTypeBtn.h */,
+				178BB4B71C9BE868001E29BB /* MTShopTypeBtn.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		171B51C51C99639C001E31DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				171B51C61C9963E6001E31DF /* MTShopViewController.h */,
+				171B51C71C9963E6001E31DF /* MTShopViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		176CF1B61C8E30AB00A88273 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,6 +252,8 @@
 				17B1F9E91C893EBA00F76318 /* MTHomeController.m */,
 				17BEBFDA1C92D01B00F4D092 /* MTCitySearchController.h */,
 				17BEBFDB1C92D01B00F4D092 /* MTCitySearchController.m */,
+				17CFC5C61C96A77C001C4A10 /* MTCodeController.h */,
+				17CFC5C71C96A77C001C4A10 /* MTCodeController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -235,6 +297,8 @@
 			children = (
 				17B1F9E51C893E2E00F76318 /* MTBaseTBController.h */,
 				17B1F9E61C893E2E00F76318 /* MTBaseTBController.m */,
+				1759210C1C9792FF00C9F2A4 /* MTRefreshHeader.h */,
+				1759210D1C9792FF00C9F2A4 /* MTRefreshHeader.m */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -273,6 +337,9 @@
 		17B1FA011C89933200F76318 /* Shop */ = {
 			isa = PBXGroup;
 			children = (
+				171B51C51C99639C001E31DF /* Controllers */,
+				171B51C41C996395001E31DF /* Views */,
+				171B51C31C99637E001E31DF /* Models */,
 			);
 			name = Shop;
 			sourceTree = "<group>";
@@ -331,6 +398,7 @@
 		38701E60D50369F6C2E4916E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17CFC5CC1C96B32C001C4A10 /* AVFoundation.framework */,
 				17A9C50C1C9128D6000DBEE9 /* CoreLocation.framework */,
 				0262E2759C8C3C60BEF2C239 /* libPods.a */,
 			);
@@ -460,6 +528,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171B51CE1C996E52001E31DF /* MTShopChooseBtn.m in Sources */,
+				178BB4B81C9BE868001E29BB /* MTShopTypeBtn.m in Sources */,
 				17B1F9F81C8973DD00F76318 /* MTTabBarController.m in Sources */,
 				176CF1B91C8E30DB00A88273 /* MTGloblesTool.m in Sources */,
 				17B1F9FF1C8974D400F76318 /* MTTabBarBtn.m in Sources */,
@@ -470,17 +540,23 @@
 				17B1F9CF1C892FB100F76318 /* ViewController.m in Sources */,
 				17BEBFDC1C92D01B00F4D092 /* MTCitySearchController.m in Sources */,
 				17B1F9E71C893E2E00F76318 /* MTBaseTBController.m in Sources */,
+				171B51C81C9963E6001E31DF /* MTShopViewController.m in Sources */,
 				17CAC2511C8ED4A2009AEC66 /* MTHomeService.m in Sources */,
 				17B1F9CC1C892FB100F76318 /* AppDelegate.m in Sources */,
 				17A9C5101C915E4B000DBEE9 /* MTGuessYLikeItem.m in Sources */,
 				17B1F9ED1C893FE100F76318 /* MTHomeMenu.m in Sources */,
+				17AD04881C9A380E00651218 /* MTShopTypeItem.m in Sources */,
 				17FA3AEB1C90222C006E9F11 /* MTDiscountBtn.m in Sources */,
 				17CAC24D1C8EC2F0009AEC66 /* MTNetworkManager.m in Sources */,
 				17B1F9F01C89409800F76318 /* MTMenuButton.m in Sources */,
+				171B51CB1C9965D1001E31DF /* MTShopChooseView.m in Sources */,
+				178BB4B51C9BE7FB001E29BB /* MTShopTypeView.m in Sources */,
 				17BEBFD61C92BEE400F4D092 /* MTHomeSearchBtn.m in Sources */,
 				17B1F9C91C892FB100F76318 /* main.m in Sources */,
 				176CF1BC1C8E365A00A88273 /* MTNavController.m in Sources */,
+				1759210E1C9792FF00C9F2A4 /* MTRefreshHeader.m in Sources */,
 				175CD26E1C8CFC3E00A680A6 /* MTHomeScrollView.m in Sources */,
+				17CFC5C81C96A77C001C4A10 /* MTCodeController.m in Sources */,
 				17A9C5131C91625F000DBEE9 /* MTGuessYLikeCell.m in Sources */,
 				17BEBFD31C92B9B600F4D092 /* MTCityButton.m in Sources */,
 			);

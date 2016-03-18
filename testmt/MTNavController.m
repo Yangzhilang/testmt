@@ -17,8 +17,7 @@
 @implementation MTNavController
 
 + (void)initialize{
-    UINavigationBar *bar = [UINavigationBar appearance];
-    [bar setBackgroundImage:[UIImage imageWithColor:[MTGloblesTool themeColor]] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 - (void)viewDidLoad {

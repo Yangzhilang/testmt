@@ -18,16 +18,17 @@
                     </tabBar>
                     <connections>
                         <segue destination="DdA-IA-D5E" kind="relationship" relationship="viewControllers" id="9DZ-l4-Qch"/>
+                        <segue destination="sHo-aa-76D" kind="relationship" relationship="viewControllers" id="NAX-1H-0M5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="co3-QE-tN5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="255" y="1204"/>
         </scene>
-        <!--Item-->
+        <!--首页-->
         <scene sceneID="u2W-jO-7cH">
             <objects>
-                <viewController id="2Y6-5m-hx5" customClass="MTHomeController" sceneMemberID="viewController">
+                <viewController title="首页" id="2Y6-5m-hx5" customClass="MTHomeController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eRO-eD-xSC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,9 +44,45 @@
             <point key="canvasLocation" x="799.4666666666667" y="1312.0799999999999"/>
         </scene>
         <!--Item-->
+        <scene sceneID="yrp-KE-Vh0">
+            <objects>
+                <navigationController id="sHo-aa-76D" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="747-EO-xRS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0G-hu-oiX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GjC-9A-EcT" kind="relationship" relationship="rootViewController" id="POF-cu-9jp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WQs-31-Uki" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998" y="822"/>
+        </scene>
+        <!--Shop View Controller-->
+        <scene sceneID="7fg-9i-TaF">
+            <objects>
+                <viewController id="GjC-9A-EcT" customClass="MTShopViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="25r-gp-B9b">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="12N-NY-iMd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kd5-e4-8xx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1378" y="1046"/>
+        </scene>
+        <!--首页Nav-->
         <scene sceneID="0ku-LY-Zxg">
             <objects>
-                <navigationController id="DdA-IA-D5E" customClass="MTNavController" sceneMemberID="viewController">
+                <navigationController title="首页Nav" id="DdA-IA-D5E" customClass="MTNavController" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="qgq-mi-w4S"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cI0-Ve-AUF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

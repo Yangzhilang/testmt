@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class MTHomeController;
 
-@interface MTCitySearchController : UISearchController
+@interface MTCitySearchController : UITableViewController
+
+@property(nonatomic,weak)MTHomeController *parent;
++ (UIViewController*)controllerWithParent:(MTHomeController*)parent;
 
 @end

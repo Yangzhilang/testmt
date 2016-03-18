@@ -10,4 +10,9 @@
 
 @interface MTHomeController : MTBaseTBController
 
+/**
+ *  设置nav 左边的城市
+ */
+- (void)setCity:(NSString*)city;
+
 @end

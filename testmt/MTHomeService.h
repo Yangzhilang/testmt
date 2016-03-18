@@ -3,7 +3,7 @@
 //  testmt
 //
 //  Created by yzl on 16/3/8.
-//  Copyright © 2016年 gaowen. All rights reserved.
+//  Copyright © 2016年 yzl. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

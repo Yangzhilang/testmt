@@ -99,4 +99,13 @@ static UIColor *g_themeColor;
     DDLogVerbose(@"详细信息：%@",_location);
 }
 
++ (NSString*)storedCity{
+    return [[NSUserDefaults standardUserDefaults] stringForKey:kMTCityString];
+}
+
++ (void)setCity:(NSString *)city{
+    [[NSUserDefaults standardUserDefaults] setObject:city forKey:kMTCityString];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
 @end

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
 #define MTThemeColorPath @"themecolor.mt"
-
+#define kMTCityString @"mtcity"
 
 @interface MTGloblesTool : NSObject
 /**
@@ -49,5 +49,19 @@
  *  @param color 
  */
 + (void)setThemeColor:(UIColor*)color;
+
+/**
+ *  保存的城市
+ *
+ *  @return
+ */
++ (NSString*)storedCity;
+
+/**
+ *  设置城市
+ *
+ *  @param city 
+ */
++ (void)setCity:(NSString*)city;
 
 @end

@@ -13,6 +13,10 @@
 #import "MTGuessYLikeCell.h"
 #import "MTCityButton.h"
 #import "MTHomeSearchBtn.h"
+#import "MTCitySearchController.h"
+#import "MTCodeController.h"
+#import "MTRefreshHeader.h"
+#import <MJRefresh.h>
 
 @interface MTHomeController ()
 
@@ -32,26 +36,46 @@
 
     [self setUpNavBar];
     [self.tableView reloadData];
+    [self loadGifRefresh];
+}
 
-
-    [self loadDiscount];
-    [self loadGueeYLike];
+- (void)loadGifRefresh{
+    DWEAKSELF
+    MJRefreshHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakSelf loadDiscount];
+        [weakSelf loadGueeYLike];
+    }];
+    self.tableView.mj_header = header;
+    [self.tableView.mj_header beginRefreshing];
 }
 
 - (void)setUpNavBar{
+
+    UINavigationBar *bar = self.navigationController.navigationBar;
+    [bar setBackgroundImage:[UIImage imageWithColor:[MTGloblesTool themeColor]] forBarMetrics:UIBarMetricsDefault];
 
     self.searchBtn = [MTHomeSearchBtn searchBtn];
     self.navigationItem.titleView = self.searchBtn;
 
     self.cityButton = [MTCityButton cityBtn];
+    [self.cityButton addTarget:self action:@selector(onCityTouched:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.cityButton];
+
+    UIButton *qrcodeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [qrcodeBtn setImage:[UIImage imageNamed:@"icon_homepage_scan"] forState:UIControlStateNormal];
+    [qrcodeBtn setImage:[UIImage imageNamed:@"icon_homepage_scan_pressed"] forState:UIControlStateSelected];
+    qrcodeBtn.frame = CGRectMake(0, 0, 20, 20);
+    [qrcodeBtn addTarget:self action:@selector(onQRcodeTouched:) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:qrcodeBtn];
 }
 
 - (void)loadDiscount{
     [MTHomeService discountDataWithSuccess:^(NSArray *data) {
         self.discountData = data;
         [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
     }];
 }
 
@@ -59,7 +83,9 @@
     [MTHomeService guessYouLikeDataWithScueess:^(NSArray *data) {
         self.gulData = data;
         [self.tableView reloadData];
+        [self.tableView.mj_header endRefreshing];
     } failure:^(NSError *error) {
+        [self.tableView.mj_header endRefreshing];
 
     }];
 }
@@ -78,6 +104,24 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - city touched
+
+- (void)onCityTouched:(UIButton*)sender{
+  
+    [self.navigationController presentViewController:[MTCitySearchController controllerWithParent:self] animated:YES completion:nil];
+}
+
+#pragma mark - qrcode touched
+
+- (void)onQRcodeTouched:(UIButton*)sender{
+    MTCodeController *ctr = [[MTCodeController alloc] init];
+//    [self.navigationController pushViewController:ctr animated:YES];
+//    [self.navigationController present]
+    [self presentViewController:ctr animated:YES completion:nil];
+}
+
+#pragma mark - tableView method
 
 - (UITableView*)tableView{
     if (!_tableView) {
@@ -186,7 +230,10 @@
     return cell;
 }
 
-
-
-
+- (void)setCity:(NSString *)city{
+    if (city==nil) {
+        return;
+    }
+    [self.cityButton setTitle:city forState:UIControlStateNormal];
+}
 @end
