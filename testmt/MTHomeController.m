@@ -53,7 +53,11 @@
 
     UINavigationBar *bar = self.navigationController.navigationBar;
     [bar setBackgroundImage:[UIImage imageWithColor:[MTGloblesTool themeColor]] forBarMetrics:UIBarMetricsDefault];
-
+//    UIView *backView = [[UIView alloc] initWithFrame:CGRectMake(0, -20, kScreenWidth, kNavigationH)];
+//    backView.backgroundColor = [MTGloblesTool themeColor];
+//    [bar addSubview:backView];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
+    bar.translucent = NO;
     self.searchBtn = [MTHomeSearchBtn searchBtn];
     self.navigationItem.titleView = self.searchBtn;
 
@@ -125,6 +129,7 @@
 
 - (UITableView*)tableView{
     if (!_tableView) {
+        objc_msgSend();
         _tableView = [[UITableView alloc] initWithFrame:self.view.frame style:UITableViewStyleGrouped];
         _tableView.delegate = self;
         _tableView.dataSource = self;

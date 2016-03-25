@@ -8,18 +8,23 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol MTShopTypeChooseProtocol <NSObject>
-
-@optional
-
-
-@end
-
 @interface MTShopChooseView : UIView
 
 @property(nonatomic,strong)UITableView *leftTable;
 @property(nonatomic,strong)UITableView *rightTable;
-@property(nonatomic,strong)NSArray *shopTypeItems;
 
+
+@property(nonatomic,strong)NSArray *shopTypeItems; ///<table 数据
+@property(nonatomic,assign)BOOL open; ///< 是否弹出flag
+
+
+/**
+ *  弹出
+ */
+- (void)pop;
+/**
+ *  弹回
+ */
+- (void)unPop;
 
 @end
